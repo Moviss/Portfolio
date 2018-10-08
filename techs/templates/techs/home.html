@@ -3,19 +3,18 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Simple portfolio app of Marcin Lubowicz
+    . Developed using Django.">
+    <meta name="author" content="Marcin Lubowicz">
 
-    <title>Marcin Lubowicz's Portfolio App - Blog</title>
+    <title>Marcin Lubowicz's Portfolio App</title>
 
-    <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
   </head>
 
-  <body>
+  <body class="animated zoomIn">
 
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -25,50 +24,63 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ml-auto">
-                <a class="nav-item nav-link" href="#">Twitter</a>
+                <a class="nav-item nav-link active" href="#">Home</a>
                 <a class="nav-item nav-link" href="#">Resume</a>
-                <a class="nav-item nav-link active" href="#">Blog</a>
+                <a class="nav-item nav-link" href="#">Blog</a>
             </div>
         </div>
     </nav>
   </header>
 
     <main role="main">
+
+      <section class="jumbotron text-center">
         <div class="container">
-            <h1 class="text-center pt-3">Welcome to my Blog</h1>
-            <br>
-            <br>
-            <h2>Latest Posts</h2>
-            <hr/>
+          <h1 class="jumbotron-heading">Welcome to my site.</h1>
+          <p class="lead text-muted">My name is Marcin and I created this
+              website just to show you that I can create simple Django
+              Project. So maybe it's a little bit dummy but it's mine ;-)
+              .</p>
+          <p>
+            <a href="mailto:marcin.lubowicz@gmail.com" class="btn btn-dark
+            my-2">Email Me</a>
+          </p>
+        </div>
+      </section>
 
-            {% for blog in blogs.all %}
-                <div class="animated slideInLeft">
-                    <a href=""><h3>{{ blog.title }}</h3></a>
-                    {{ blog.pub_date_pretty }}
-                    <br>
-                    <img class="img-fluid" src="{{ blog.image.url }}">
-                    <br>
-                    <p>{{ blog.summary }}</p>
+      <div class="album py-5 bg-light">
+        <div class="container bg-secondary">
+
+          <h2 class="text-center">My Skills:</h2>
+        <br>
+
+          <div class="row">
+
+            {% for tech in techs.all %}
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="{{ tech.image.url }}">
+                <div class="card-body text-white bg-dark">
+                  <p class="card-text">{{ tech.summary }}</p>
                 </div>
-
+              </div>
+            </div>
             {% endfor %}
 
+          </div>
+
         </div>
-
-
+      </div>
 
 
     </main>
 
-    <footer class="text-muted">
+    <footer class="text-muted bg-dark">
       <div class="container text-center">
-        <p>&copy; Marcin Lubowicz {% now "Y" %}</p>
+        <p class="text-white">&copy; Marcin Lubowicz {% now "Y" %}</p>
       </div>
     </footer>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
