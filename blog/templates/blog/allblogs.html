@@ -20,20 +20,21 @@
   <body>
 
   <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="{% url 'home' %}">Marcin Lubowicz</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav ml-auto">
-                <a class="nav-item nav-link" href="{% url 'home' %}">Home</a>
-                <a class="nav-item nav-link" href="{% static 'Marcin-Lubowicz-CV.pdf' %}">Resume</a>
-                <a class="nav-item nav-link active" href="{% url 'allblogs' %}">Blog</a>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+            <a class="navbar-brand" href="{% url 'home' %}">Marcin Lubowicz</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto">
+                    <a class="nav-item nav-link active" href="{% url 'home' %}">Home</a>
+                    <a class="nav-item nav-link" href="
+    {% static 'Marcin-Lubowicz-CV.pdf' %}">Resume</a>
+                    <a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog</a>
+                </div>
             </div>
-        </div>
-    </nav>
-  </header>
+        </nav>
+    </header>
 
     <main role="main">
         <div class="container">
@@ -63,9 +64,10 @@
 
     </main>
 
-    <footer class="text-muted bg-dark">
+    <footer class="text-muted bg-success p-3">
       <div class="container text-center">
-        <p class="text-white">&copy; Marcin Lubowicz {% now "Y" %}</p>
+        <span class="text-white align-middle">&copy; Marcin Lubowicz
+            {% now "Y" %}</span>
       </div>
     </footer>
 

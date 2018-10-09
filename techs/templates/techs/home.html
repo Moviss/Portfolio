@@ -19,7 +19,7 @@
     <body class="animated zoomIn">
 
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-success">
             <a class="navbar-brand" href="{% url 'home' %}">Marcin Lubowicz</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -39,14 +39,14 @@
 
       <section class="jumbotron text-center">
         <div class="container">
-          <h1 class="jumbotron-heading">Welcome to my site.</h1>
-          <p class="lead text-muted">My name is Marcin and I created this
+          <h1 class="jumbotron-heading text-success">Welcome to my site.</h1>
+          <p class="lead text-dark">My name is Marcin and I created this
               website just to show you that I can create simple Django
               Project. So maybe it's a little bit dummy but it's made by myself
               ;-)
               .</p>
           <p>
-            <a href="mailto:marcin.lubowicz@gmail.com" class="btn btn-dark
+            <a href="mailto:marcin.lubowicz@gmail.com" class="btn btn-success
             my-2">Email Me</a>
           </p>
           <img src="{% static 'ml.JPG' %}" alt="Picture of me"
@@ -57,7 +57,7 @@
       <div class="album py-5 bg-light">
         <div class="container bg-secondary">
 
-          <h2 class="text-center">My Skills:</h2>
+          <h2 class="text-center text-light">My Skills:</h2>
         <br>
 
           <div class="row">
@@ -81,9 +81,10 @@
 
     </main>
 
-    <footer class="text-muted bg-dark">
+    <footer class="text-muted bg-success p-3">
       <div class="container text-center">
-        <p class="text-white">&copy; Marcin Lubowicz {% now "Y" %}</p>
+        <span class="text-white align-middle">&copy; Marcin Lubowicz
+            {% now "Y" %}</span>
       </div>
     </footer>
 
