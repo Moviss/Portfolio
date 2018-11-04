@@ -42,7 +42,7 @@
                 <h1 class="text-center pt-3">{{ blog.title }}</h1>
                 <p class="text-center">{{ blog.pub_date }}</p>
                 <img class="img-fluid" src="{{ blog.image.url }}">
-                <div class="p-3">{{ blog.body }}</div>
+                <div class="p-3">{{ blog.body|linebreaksbr }}</div>
             </div>
         </div>
 
